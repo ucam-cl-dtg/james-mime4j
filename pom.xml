@@ -27,7 +27,7 @@
   <groupId>org.apache.james</groupId>
   <artifactId>apache-mime4j</artifactId>
   <name>Apache JAMES Mime4j</name>
-  <version>0.6.1</version>
+  <version>0.6.1-iso8859encoding</version>
   <description>Java stream based MIME message parser</description>
   <url>http://james.apache.org/mime4j</url>
   <issueManagement>
