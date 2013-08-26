@@ -39,6 +39,18 @@
       <id>mime4j-website</id>
       <url>http://people.apache.org/www/james.apache.org/mime4j/</url>
     </site>
+    <!-- use the following if you're not using a snapshot version. -->
+    <repository>
+      <id>dtg-code</id>
+      <name>RepositoryProxy</name>
+      <url>http://dtg-maven.cl.cam.ac.uk/content/repositories/releases</url>
+    </repository>
+    <!-- use the following if you ARE using a snapshot version. -->
+    <snapshotRepository>
+      <id>dtg-code</id>
+      <name>RepositoryProxy</name>
+      <url>http://dtg-maven.cl.cam.ac.uk/content/repositories/snapshots</url>
+    </snapshotRepository>
   </distributionManagement>
   <scm>
     <connection>scm:svn:http://svn.apache.org/repos/asf/james/mime4j/tags/apache-mime4j-0.6.1</connection>
