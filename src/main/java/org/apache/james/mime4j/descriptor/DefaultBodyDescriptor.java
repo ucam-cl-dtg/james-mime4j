@@ -32,8 +32,11 @@ import org.apache.james.mime4j.util.MimeUtil;
  * (which starts with <code>Content-</code>). 
  */
 public class DefaultBodyDescriptor implements MutableBodyDescriptor {
-    private static final String US_ASCII = "us-ascii";
+	
+	public static final String ACR_CHARSET = "ISO-8859-1";
 
+	private static final String US_ASCII = ACR_CHARSET;
+	
     private static final String SUB_TYPE_EMAIL = "rfc822";
 
     private static final String MEDIA_TYPE_TEXT = "text";

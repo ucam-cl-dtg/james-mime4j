@@ -27,6 +27,7 @@ import java.util.Map;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.james.mime4j.descriptor.DefaultBodyDescriptor;
 import org.apache.james.mime4j.field.contenttype.parser.ContentTypeParser;
 import org.apache.james.mime4j.field.contenttype.parser.ParseException;
 import org.apache.james.mime4j.field.contenttype.parser.TokenMgrError;
@@ -206,7 +207,8 @@ public class ContentTypeField extends AbstractField {
                 return charset;
             }
         }
-        return "us-ascii";
+
+        return DefaultBodyDescriptor.ACR_CHARSET;
     }
 
     private void parse() {

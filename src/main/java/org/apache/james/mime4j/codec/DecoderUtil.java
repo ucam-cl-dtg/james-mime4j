@@ -28,6 +28,7 @@ import java.util.regex.Pattern;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.james.mime4j.descriptor.DefaultBodyDescriptor;
 import org.apache.james.mime4j.util.CharsetUtil;
 
 /**
@@ -49,8 +50,7 @@ public class DecoderUtil {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         
         try {
-            byte[] bytes = s.getBytes("US-ASCII");
-            
+        	byte[] bytes = s.getBytes(DefaultBodyDescriptor.ACR_CHARSET);
             QuotedPrintableInputStream is = new QuotedPrintableInputStream(
                                                new ByteArrayInputStream(bytes));
             
@@ -77,7 +77,7 @@ public class DecoderUtil {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         
         try {
-            byte[] bytes = s.getBytes("US-ASCII");
+            byte[] bytes = s.getBytes(DefaultBodyDescriptor.ACR_CHARSET);
             
             Base64InputStream is = new Base64InputStream(
                                         new ByteArrayInputStream(bytes));
